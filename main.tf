@@ -12,12 +12,10 @@ terraform {
 
 # Download any stable version in AWS provider of 2.36.0 or higher in 2.36 train
 provider "aws" {
-  region  = "us-east-1"
+  region  = "ap-south-1"
   version = "~> 2.36.0"
 }
 
-
-/* Commented out until after bootstrap
 
 # Call the seed_module to build our ADO seed info
 module "bootstrap" {
@@ -60,4 +58,4 @@ resource "aws_route_table" "route_table2" {
     Terraform = "true"
   }
 }
-*/
+

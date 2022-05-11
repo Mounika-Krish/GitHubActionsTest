@@ -3,7 +3,7 @@
 ##
 
 # Build an S3 bucket to store TF state
-resource "aws_s3_bucket" "state_bucket" {
+resource "aws_s3_bucket" "bucket-name-batch6" {
   bucket = var.name_of_s3_bucket
 
   # Tells AWS to encrypt the S3 bucket at rest by default
@@ -31,7 +31,7 @@ resource "aws_s3_bucket" "state_bucket" {
 }
 
 # Build a DynamoDB to use for terraform state locking
-resource "aws_dynamodb_table" "tf_lock_state" {
+resource "aws_dynamodb_table" "aws-locks" {
   name = var.dynamo_db_table_name
 
   # Pay per request is cheaper for low-i/o applications, like our TF lock state

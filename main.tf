@@ -2,7 +2,7 @@
 terraform {
   required_version = ">=0.12.13"
   #backend "s3" {
-  #  bucket         = "kyler-github-actions-demo-terraform-tfstate"
+  #  bucket         = "bucket-name-batch6"
   #  key            = "terraform.tfstate"
   #  region         = "us-east-1"
   #  dynamodb_table = "aws-locks"
@@ -20,7 +20,7 @@ provider "aws" {
 # Call the seed_module to build our ADO seed info
 module "bootstrap" {
   source                      = "./modules/bootstrap"
-  name_of_s3_bucket           = "kyler-github-actions-demo-terraform-tfstate"
+  name_of_s3_bucket           = "bucket-name-batch6"
   dynamo_db_table_name        = "aws-locks"
   iam_user_name               = "GitHubActionsIamUser"
   ado_iam_role_name           = "GitHubActionsIamRole"
